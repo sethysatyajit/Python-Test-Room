@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Python Test Room – 50 interactive challenges from basic syntax to advanced concepts. Developer-themed Python mastery.">
+  <meta name="author" content="Satyajit Sethy">
+  <title>Python Test Room | Satyajit Sethy</title>
+  <!-- Font Awesome for Python icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanline"></div>
+  <div class="terminal">
+    <header>
+      <div class="python-header">
+        <i class="fab fa-python python-icon"></i>
+        <h1 class="typewriter">// PYTHON TEST ROOM //</h1>
+        <i class="fab fa-python python-icon"></i>
+      </div>
+      <p class="sub flicker">[ ROOMS: 5 · 50 CHALLENGES ] — from print() to __init__</p>
+    </header>
+
+    <main id="app">
+      <!-- Room selection -->
+      <section id="room-selector" class="panel active">
+        <h2>> SELECT ROOM_</h2>
+        <div class="room-grid" id="roomGrid"></div>
+        <div class="stats" id="globalStats"></div>
+      </section>
+
+      <!-- Active challenge -->
+      <section id="challenge-panel" class="panel">
+        <div class="room-header">
+          <button class="ghost-btn" id="backToRoomsBtn"><i class="fas fa-arrow-left"></i> BACK</button>
+          <h2 id="roomTitle" class="glitch-text">ROOM 1: BASICS</h2>
+          <span id="progressIndicator">1/10</span>
+        </div>
+        <div class="code-card">
+          <div class="code-header">
+            <span class="badge" id="topicLabel">print & variables</span>
+            <span class="difficulty-tag" id="difficultyTag">easy</span>
+          </div>
+          <pre class="code-snippet" id="questionDisplay">print("Hello, World!")</pre>
+        </div>
+        <div class="hint-area" id="hintContainer">
+          <div class="hint-header">
+            <span><i class="fas fa-lightbulb"></i> HINT WORDS</span>
+            <span class="badge">possible answers</span>
+          </div>
+          <div class="wordlist" id="hintBox"></div>
+        </div>
+        <div class="input-area">
+          <label for="answerInput"><i class="fab fa-python"></i> > <span>answer</span> _</label>
+          <input type="text" id="answerInput" placeholder="type your answer..." autocomplete="off" spellcheck="false" />
+          <button class="primary-btn" id="submitAnswerBtn">CHECK</button>
+        </div>
+        <div class="message" id="messageBox"></div>
+        <div class="action-bar">
+          <button class="secondary-btn" id="nextQuestionBtn" disabled>NEXT →</button>
+          <button class="secondary-btn" id="resetRoomBtn"><i class="fas fa-redo-alt"></i> RESET</button>
+        </div>
+      </section>
+
+      <!-- Room summary -->
+      <section id="summary-panel" class="panel">
+        <h2>> ROOM COMPLETE_</h2>
+        <div id="summaryScore"></div>
+        <div id="answerKey"></div>
+        <button class="primary-btn" id="summaryBackBtn">CHOOSE ANOTHER ROOM</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="copyright">
+          © <span id="currentYear"></span> Satyajit Sethy · Python Training
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/sethysatyajit" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="cursor-blink"><i class="fab fa-python"></i> > <span class="type-cursor">|</span></div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
